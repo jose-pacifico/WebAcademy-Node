@@ -23,11 +23,8 @@ const server = http.createServer((req, res) => {
             }
         } else {
             fs.readFile(`${folder}/${req.url}`, (err, content) => {
-                if (err) console.error(err)
-                else {
                     res.write(createBack());
                     res.end(content);
-                }
             });
         }
     })
