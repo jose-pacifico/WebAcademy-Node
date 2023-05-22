@@ -8,7 +8,6 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 3333;
 const folder = process.argv[2];
-console.log(folder);
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, {
